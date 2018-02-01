@@ -1,0 +1,81 @@
+// Colors
+
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
+
+@function space($key) {
+  @if map-has-key($spaces, $key) {
+    @return map-get($spaces, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $spaces.";
+  @return null;
+}
+
+@each $name, $value in $colors {
+    .bg--#{$name} {
+        background-color: $value
+    }
+    .text--#{$name} {
+        color: $value
+    }
+}
+
+// Breakpoints
+
+$breakpoints-queries: ();
+
+@each $key, $pixels in $breakpoints {
+  $screen-string: 'only screen';
+
+  @if ($pixels == '0') {
+    $breakpoints-queries: map-merge($breakpoints-queries, ($key: '#{$screen-string}'));
+  } @else {
+    $breakpoints-queries: map-merge($breakpoints-queries, ($key: '#{$screen-string} and (min-width: #{em($pixels, 16)})'));
+  }
+}
+
+@mixin breakpoint($media) {
+  @if map-has-key($breakpoints-queries, $media) {
+    @media #{map-get($breakpoints-queries, $media)} {
+      @content;
+    }
+  } @else {
+    @error 'The breakpoint you have provided "#{$media}" is not defined in $breakpoints-queries';
+  }
+}
+
+@mixin bp($media) {
+  @include breakpoint($media) {
+    @content;
+  }
+}
+
+
+$directions: (
+    'left', 'right', 'top', 'bottom'
+);
+
+/* For each size create some classes */
+@each $name, $value in $spaces {
+    .space--#{$name} {
+        margin: $value
+    }
+    .padding--#{$name} {
+        padding: $value
+    }
+  @each $direction in $directions {
+      .space-#{$direction}--#{$name} {
+           margin-#{$direction}: $value;
+       }
+       .padding-#{$direction}--#{$name} {
+           padding-#{$direction}: $value;
+       }
+  }
+}

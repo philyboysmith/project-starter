@@ -1,0 +1,95 @@
+// Colors
+
+$colors: (
+    primary: #c02,
+    primary--light: #f04,
+    primary--dark: #601,
+    secondary--light: #3be,
+    secondary: #269,
+    secondary--dark: #257,
+    neutral--lightest: #efeff0,
+    neutral--lighter: #b9b9c0,
+    neutral--light: #8c8c9c,
+    neutral: #778,
+    neutral--dark: #636373,
+    neutral--darker: #3f3f46,
+    neutral--darkest: #1f1f20,
+);
+    
+    $color-background: white;
+    $color-text: map-get($colors, neutral--dark);
+    $color-link: map-get($colors, primary);
+    $color-link--active: rgba( map-get($colors, primary), 0.8);
+    $color-link--hover: rgba( map-get($colors, primary), 0.8);
+    $color-focus: $color-link;
+
+// Fonts
+
+    $font-family--sans: 'Source Sans Pro', sans-serif;
+    $font-family--serif: 'Source Serif Pro', serif;
+    $font-family--monospace: 'Source Code Pro', monospace;
+    $font-family--system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    $font-family--primary: $font-family--sans;
+    $font-family--secondary: $font-family--sans;
+
+    $font-size--base: 15px;
+    $line-height--base: 1.3;
+
+// Borders
+
+    $border-width--thin: 1px;
+    $border-width--thick: 2px;
+    $border-width--thicker: 4px;
+    $border-width--thickest: 8px;
+    $border-radius--small: 0.125rem;
+    $border-radius--default: 0.25rem;
+    $border-radius--circle: 50%;
+
+
+
+// Layers
+
+    $z-index--modal: 9000;
+    $z-index--backdrop: 8000;
+    $z-index--overlay: 1000;
+    $z-index--default: 1;
+    $z-index--underlay: -1;
+
+// Breakpoints
+
+$breakpoints: (
+    min: 280,
+    xs: 360,
+    s: 480,
+    m: 504,
+    lg: 800,
+    xlg: 960,
+    max: 1280
+) !default;
+
+// $flexboxgrid-breakpoints: $breakpoints;
+
+// Sizes
+
+$sizes:(
+    xs: 0.25rem,
+    s: 0.5rem,
+    m: 1rem,
+    l: 1.5rem,
+    xl: 3rem,
+    xxl: 4.5rem
+);
+    
+
+
+// Spaces
+
+$spaces:(
+    xs: 0.25rem,
+    s: 0.5rem,
+    m: 1rem,
+    l: 1.5rem,
+    xl: 3rem,
+    xxl: 4.5rem
+)

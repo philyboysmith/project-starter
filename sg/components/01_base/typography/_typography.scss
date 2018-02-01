@@ -1,0 +1,176 @@
+//---------------------------------------------//
+// Typography - Outline
+// Set headings, font, link , hr, sub & sup,
+// abbreviation, highlighting, figure
+// & blockquote styles
+//---------------------------------------------//
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: $font-family--primary;
+  font-size: $font-size--base;
+  line-height: $line-height--base;
+  color: color(neutral--dark);
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+%h1, %h2, %h3, %h4, %h5, %h6 {
+  font-family: $font-family--secondary;
+  font-weight: normal;
+}
+
+
+p {
+  margin-bottom: space(m);
+}
+
+.font-primary,
+%font-primary {
+  font-family: $font-family--primary;
+}
+
+.font-secondary,
+%font-secondary {
+  font-family: $font-family--secondary;
+}
+
+.lead,
+%lead {
+  font-size: 1.125rem;
+}
+
+small,
+.text-small,
+%text-small {
+  font-size: .75rem;
+}
+
+.text-muted {
+  color: color(neutral);
+}
+
+.hyphenate,
+%hyphenate {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em,
+cite,
+dfn,
+var {
+  font-style: italic;
+}
+
+// link styles
+a {
+  text-decoration: none;
+  word-wrap: break-word;
+  color: $color-link;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: $color-link--hover;
+}
+
+a img {
+  border: none;
+  background: none;
+}
+
+// prevents border/background on linked image hover
+a:hover img {
+  border: none;
+  background: none;
+}
+
+// lines
+hr {
+  margin: space(m) auto;
+  border: 0;
+  border-top: .0625rem solid color(neutral);
+  border-bottom: 0 solid #fff;
+}
+
+// subscript & superscript
+sub,
+sup {
+  position: relative;
+  margin-left: .25rem;
+  font-size: 85%;
+  font-weight: bold;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.5rem;
+}
+
+sub {
+  bottom: -.25rem;
+}
+
+// abbreviation or acronym
+abbr[title] {
+  border-bottom: .0625rem dotted color(neutral--dark);
+}
+
+// mark element (highlight)
+mark {
+  background-color: yellow;
+  color: color(neutral--dark);
+  padding: .25rem;
+}
+
+// blockquote
+blockquote {
+  margin-bottom: space(m);
+  padding-left: space(m);
+  padding-right: space(m);
+  border-left: .25rem solid color(neutral);
+  font-family: $font-family--secondary;
+  p:last-of-type {
+    margin-bottom: .25rem;
+  }
+
+  cite {
+    font-style: italic;
+    @extend %text-small;
+  }
+}
+
+// figure and caption
+figure {
+  margin-bottom: space(m);
+}
+
+figcaption {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  font-family: $font-family--secondary;
+  font-size: .875rem;
+  text-align: center;
+  border-bottom: .0625rem solid color(neutral--light);
+}
+
+// highlighting colors
+::selection {
+  color: #fff;
+  background: color(primary);
+}
+
+code {
+  background: color(neutral--lightest);
+  padding: space(s);
+}

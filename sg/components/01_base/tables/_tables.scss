@@ -1,0 +1,77 @@
+//---------------------------------------------//
+// Tables - Outline
+// Basic styles for tables
+// Docs - http://outlinecss.co.uk/get-started.html#tables
+//---------------------------------------------//
+
+table {
+  max-width: 100%;
+  width: 100%;
+  margin-bottom: space(m);
+  border-spacing: 0;
+  border-collapse: collapse;
+  border: 0;
+
+  th,
+  tfoot td {
+    text-align: left;
+    font-family: $font-family--secondary;
+  }
+
+  th,
+  td {
+    padding: space(s);
+    vertical-align: top;
+  }
+}
+
+table,
+.table {
+  thead > tr {
+    border-bottom: $border-width--thin solid color(neutral--light);
+  }
+}
+
+.table--striped {
+  tbody > tr:nth-child(odd) > td {
+    background-color: color(neutral--lightest);
+  }
+}
+
+.table--border-rows {
+  tr {
+    border-bottom: $border-width--thin solid color(neutral--light);
+  }
+}
+
+.table--border-cells {
+  th,
+  td {
+    border: $border-width--thin solid color(neutral--light);
+  }
+}
+
+.table--condensed {
+  thead > tr {
+    border-bottom: $border-width--thin solid color(neutral--light);
+  }
+
+  th,
+  td {
+    padding: space(s);
+  }
+}
+
+// responsive table container
+.table--responsive {
+  overflow-x: auto;
+  width: 100%;
+  margin-bottom: space(m);
+  -webkit-overflow-scrolling: touch;
+
+  table {
+    margin-bottom: space(s);
+  }
+}
+
+

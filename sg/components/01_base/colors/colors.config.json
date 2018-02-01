@@ -1,0 +1,56 @@
+{
+    "context": {
+        "colors": [{
+            "name": "primary",
+            "variable": "primary"
+        },
+        {
+            "name": "primary--light",
+            "variable": "primary--light"
+        },
+        {
+            "name": "primary--dark",
+            "variable": "primary--dark"
+        },
+        {
+            "name": "secondary--light",
+            "variable": "secondary--light"
+        },
+        {
+            "name": "secondary",
+            "variable": "secondary"
+        },
+        {
+            "name": "secondary--dark",
+            "variable": "secondary--dark"
+        },
+        {
+            "name": "neutral--lightest",
+            "variable": "neutral--lightest"
+        },
+        {
+            "name": "neutral--lighter",
+            "variable": "neutral--lighter"
+        },
+        {
+            "name": "neutral--light",
+            "variable": "neutral--light"
+        },
+        {
+            "name": "neutral",
+            "variable": "neutral"
+        },
+        {
+            "name": "neutral--dark",
+            "variable": "neutral--dark"
+        },
+        {
+            "name": "neutral--darker",
+            "variable": "neutral--darker"
+        },
+        {
+            "name": "neutral--darkest",
+            "variable": "neutral--darkest"
+        }] 
+    }
+}
