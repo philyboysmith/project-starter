@@ -1,0 +1,38 @@
+.c-button {
+  font-family: inherit;
+  font-size: inherit;
+  display: inline-block;
+  line-height: 1;
+  padding: space(m) space(l);
+  background-color: $color-link;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  vertical-align: middle;
+  text-decoration: none;
+  &:hover {
+    background-color: $color-link--hover;
+    color: white;
+    text-decoration: none;
+  }
+
+  &:active {
+    background-color: $color-link--active;
+    color: white;
+  }
+
+  @media (-ms-high-contrast: active) {
+    border: 1px solid;
+  }
+
+  @media print {
+    display: none;
+  }
+}
+
+.c-button--block {
+//   display: block;
+}
