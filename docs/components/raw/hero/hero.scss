@@ -1,0 +1,63 @@
+.c-hero {
+    background-color: $color-overlay;
+    position: relative;
+    color: white;
+    width: 100%;
+    @include bp(lg){
+        min-height: 66.666vh;
+        overflow: hidden;
+    }
+
+}
+
+.c-hero--full-height {
+    @include bp(lg){
+        min-height: 100vh;
+    }
+}
+
+.c-hero__video {
+  position: fixed;
+  right: 0; 
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto;
+  z-index: -100;
+}
+
+.c-hero__bg {
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    @include bp(lg){
+        > * {
+            min-height: 100%;  
+            min-width: 100%; 
+            height: auto;
+            position: absolute;  
+            top: 0;  
+            bottom: 0;  
+            left: 0;  
+            right: 0;  
+            margin: auto;
+        }
+    }
+}
+.c-hero__overlay {
+    background: color(primary);
+    padding-top: space(m);
+    padding-bottom: space(m);
+    @include bp(lg){
+        background: transparent;
+        position: absolute;
+        top: auto;
+        left: 0;
+        width: 100%;
+        bottom: space(l);
+    }
+}
+.c-hero__text {
+    color: white;
+    max-width: 42rem;
+}

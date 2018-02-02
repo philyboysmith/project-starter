@@ -63,8 +63,9 @@ gulp.task("fractal:start", function() {
 gulp.task("fractal:build", function() {
   const builder = fractal.web.builder();
   const pkg = require("./package.json");
-
-  return file("CNAME", pkg.sg_url, { src: true }).pipe(gulp.dest("docs/"));
+  if (pkg.sg_url) return file("CNAME", pkg.sg_url, {
+      src: true
+    }).pipe(gulp.dest("docs/"));
   builder.on("progress", (completed, total) =>
     logger.update(`Exported ${completed} of ${total} items`, "info")
   );

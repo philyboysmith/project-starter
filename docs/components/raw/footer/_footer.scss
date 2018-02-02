@@ -1,3 +1,21 @@
 .c-footer {
-    
+    padding: space(l) 0;
+    p, a {
+        color: color(neutral--lightest);
+        font-size: 0.8em;
+        line-height: 1.5;
+    }
+    a:hover {
+        color: color(neutral--lighter)
+    }
+    @include bp(lg){
+        display: flex;
+        justify-content: space-between;
+        .c-footer__contact {
+            text-align: right;
+        }
+        p {
+            margin-bottom: 0;
+        }
+    }
 }
