@@ -31,6 +31,10 @@
 
 $breakpoints-queries: ();
 
+@function em($pixels, $context) {
+  @return #{$pixels/$context}em;
+}
+
 @each $key, $pixels in $breakpoints {
   $screen-string: 'only screen';
 
@@ -64,14 +68,14 @@ $directions: (
 
 /* For each size create some classes */
 @each $name, $value in $spaces {
-    .space--#{$name} {
+    .margin--#{$name} {
         margin: $value
     }
     .padding--#{$name} {
         padding: $value
     }
   @each $direction in $directions {
-      .space-#{$direction}--#{$name} {
+      .margin-#{$direction}--#{$name} {
            margin-#{$direction}: $value;
        }
        .padding-#{$direction}--#{$name} {

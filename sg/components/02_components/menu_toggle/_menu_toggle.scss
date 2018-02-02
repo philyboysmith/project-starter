@@ -1,0 +1,39 @@
+.c-menu-toggle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1rem;
+    z-index: 50;
+}
+.c-menu-toggle .line{
+    width: 27px;
+    height: 3px;
+    border-radius: 4px;
+    background-color: color(primary);
+    display: block;
+    margin: 4px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+// .js-header-active .c-menu-toggle .line{
+//         background-color: color(primary);
+// }
+
+.c-menu-toggle:hover{
+    cursor: pointer;
+}
+
+.js-nav-active  .c-menu-toggle .line:nth-child(2){
+    opacity: 0;
+  }
+  
+.js-nav-active  .c-menu-toggle .line:nth-child(1){
+    transform: translateY(7px) rotate(45deg);
+    background-color: white;
+}
+
+.js-nav-active  .c-menu-toggle .line:nth-child(3){
+    transform: translateY(-7px) rotate(-45deg);
+    background-color: white;
+}
+  

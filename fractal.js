@@ -7,6 +7,8 @@ const path = require("path");
 
 const mandelbrot = require("@frctl/mandelbrot");
 
+const url = 'purpledoor.amillionmonkeys.co.uk';
+
 /*
  * Require the Fractal module
  */

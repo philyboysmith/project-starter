@@ -15,7 +15,6 @@ table {
   th,
   tfoot td {
     text-align: left;
-    font-family: $font-family--secondary;
   }
 
   th,
@@ -34,7 +33,7 @@ table,
 
 .table--striped {
   tbody > tr:nth-child(odd) > td {
-    background-color: color(neutral--lightest);
+    background-color: color(neutral--lighter);
   }
 }
 

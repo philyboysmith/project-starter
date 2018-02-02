@@ -17,6 +17,8 @@ const svgStore = require("gulp-svgstore");
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
 
+const file = require("gulp-file");
+
 const del = require("del");
 const fractal = require("./fractal.js"); // import the Fractal instance configured in the fractal.js file
 
@@ -26,9 +28,13 @@ const watchOpt = { awaitWriteFinish: true };
 
 const STYLES_WATCHLIST = ["src/scss/**/*.scss", "sg/components/**/*.scss"];
 
-const JS_LINT_WATCHLIST = ["*.js"];
+const JS_LINT_WATCHLIST = [ "*.js"];
 
-const JS_BUILD_WATCHLIST = ["src/js/**/*.js", "sg/components/**/*.js"];
+const JS_BUILD_WATCHLIST = [
+  "./node_modules/jquery/dist/jquery.js",
+  "src/js/**/*.js",
+  "sg/components/**/*.js"
+];
 
 const SVG_WATCHLIST = ["src/svg/*.svg", "sg/components/**/*.svg"];
 
@@ -56,6 +62,9 @@ gulp.task("fractal:start", function() {
 
 gulp.task("fractal:build", function() {
   const builder = fractal.web.builder();
+  const pkg = require("./package.json");
+
+  return file("CNAME", pkg.sg_url, { src: true }).pipe(gulp.dest("docs/"));
   builder.on("progress", (completed, total) =>
     logger.update(`Exported ${completed} of ${total} items`, "info")
   );
@@ -207,6 +216,7 @@ gulp.task("build:clean", function() {
 gulp.task("js:process", function(cb) {
   return gulp
     .src([
+      "./node_modules/jquery/dist/jquery.js",
       "./src/js/**/*.js",
       "./sg/components/**/*.js"
     ])
@@ -254,8 +264,8 @@ gulp.task(
 
       cb();
     },
-    "src",
     "build:clean",
+    "src",
     "fractal:build"
   )
 );

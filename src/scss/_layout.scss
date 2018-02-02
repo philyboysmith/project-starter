@@ -1,0 +1,23 @@
+.l-container {
+    margin-bottom: space(m);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 space(m);
+}
+.l-grid {
+    display: flex;
+    margin: 0 0 space(m);
+}
+
+.l-grid__item {
+    flex: 0 0 100%;
+    padding: space(m);
+    @include bp(m){
+        flex-basis: 50%;
+    }
+    @include bp(lg){
+        .l-grid--filterable & {
+            flex-basis: 33.333%;
+        }
+    }
+}

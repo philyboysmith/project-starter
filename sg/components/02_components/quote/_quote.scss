@@ -1,0 +1,42 @@
+.c-quote {
+    color: white;
+    display: flex;
+    padding: space(xl) 0;
+    position: relative;
+    flex-direction: column;
+    @include bp(m){
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.c-quote__mark {
+    flex: 0 1;
+    font-size: 10rem;
+    font-weight:900;
+    padding: 0 2rem 0 0;
+    display: none;
+    @include bp(m){
+        display: block;
+        flex-direction: row;
+    }
+}
+
+.c-quote__text {
+    flex: 2;
+    padding-right: space(xl);
+    max-width: 62em;
+    line-height: 1.7;
+}
+.c-quote__logo {
+    flex: 1;
+    @include bp(m){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+            flex: 0 0 6em;
+        }
+    }
+}

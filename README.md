@@ -24,6 +24,8 @@ fractal build
 
 The build is compiled to the docs folder, which allows you to use github pages to preview the style guide.
 
+If you are using github pages, be sure to update the sg_url in package.json
+
 ## What's inside
 
 - [Fractal](http://fractal.build) - a simple component based style guide

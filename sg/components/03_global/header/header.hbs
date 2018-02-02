@@ -1,3 +1,31 @@
-<header class="c-header">
-    
+<header class="c-header__wrapper">
+    <div class="l-container">
+        <div class="c-header">
+            <div class="c-header__logo">
+                <svg viewBox="0 0 258 56" style="width: 258px; height: 56px;">
+                    <use xlink:href="#logo"></use>
+                </svg>
+            </div>
+            <div class="c-header__nav">
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="">About</a>
+                    </li>
+                    <li>
+                        <a href="">Work</a>
+                    </li>
+                    <li>
+                        <a href="">News</a>
+                    </li>
+                    <li>
+                        <a href="">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+            {{> @menu_toggle }}
+        </div>
+    </div>
 </header>
