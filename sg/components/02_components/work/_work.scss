@@ -1,0 +1,43 @@
+.c-work-filter {
+    @extend %list--unstyled;
+    padding-top: space(l);
+}
+
+.c-work-filter__item {
+    @extend %h4, %font-thin;
+    position: relative;
+    margin-bottom: space(s);
+    a {
+        line-height: 1.2;
+        padding-left: 0.5em;
+        padding-right: space(m);
+        display: inline-block;
+        color: color(neutral--lighter);
+        transition: color 0.2s;
+        &:before {
+            content: "–";
+            font-weight: 300;
+            position: absolute;
+            left: 0;
+            top:0;
+            transform: translateX(-100%);
+            max-width: 0;
+            transition: all 0.4s;
+            overflow: hidden;
+        }
+    }
+    a:hover {
+        color: color(neutral);      
+        &:before {
+            max-width: 2em;
+        }
+    }
+    a.active {
+        color: color(primary);
+    }
+}
+
+.c-work__item {
+    padding-top: space(l);
+    display: none;
+}

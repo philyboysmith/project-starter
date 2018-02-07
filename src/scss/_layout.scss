@@ -4,9 +4,25 @@
     margin: 0 auto;
     padding: 0 space(m);
 }
+
+.l-container--flex {
+    display: flex;
+    flex-direction: column;
+    @include bp(m){
+        flex-direction: row;
+        .l-subnav {
+            flex: 0 0 16em;
+            padding-right: 1em;
+        }
+        .l-main {
+            flex: 1;
+        }
+    }
+}
 .l-grid {
     display: flex;
     margin: 0 0 space(m);
+    @extend %list--unstyled;
 }
 
 .l-grid__item {

@@ -1,0 +1,43 @@
+<div class="l-container  l-container--flex">
+    <div class="l-subnav">
+        <ul class="c-work-filter">
+            <li class="c-work-filter__item">
+                <a href="#film-work" class="active" >Film</a>
+            </li>
+            <li class="c-work-filter__item ">
+                <a href="#animation-work">Animation Motion Graphics</a>
+            </li>
+            <li class="c-work-filter__item">
+                <a href="#graphic-design-work">Graphic Design</a>
+            </li>
+            <li class="c-work-filter__item">
+                <a href="#copywriting-work">Copywriting</a>
+            </li>
+        </ul>
+    </div>
+    <div class="l-main">
+        <div class="c-work">
+            <div id="film-work" class="c-work__item  c-work__item--film" style="display: block;">
+                <div class="c-work__description">
+                    <h2>Film</h2>
+                    <p>Eros turpis tristique himenaeos tempor viverra non curabitur ultrices sagittis, ornare lacinia sociis varius
+                        nulla integer porttitor malesuada, in condimentum sollicitudin euismod platea convallis habitant tempus.</p>
+                </div>
+                <div class="c-work__examples">
+                    {{> @project-grid}}
+                </div>
+            </div>
+
+            <div id="animation-work" class="c-work__item  c-work__item--animation">
+                <div class="c-work__description">
+                    <h2>Animation</h2>
+                    <p>Eros turpis tristique himenaeos tempor viverra non curabitur ultrices sagittis, ornare lacinia sociis varius nulla
+                        integer porttitor malesuada, in condimentum sollicitudin euismod platea convallis habitant tempus.</p>
+                </div>
+                <div class="c-work__examples">
+                    {{> @project-grid}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

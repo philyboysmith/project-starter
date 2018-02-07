@@ -1,5 +1,5 @@
 ---
-title: amillionmonkeys project starter
+title: purple door media style guide
 ---
 
 ### Finding your way
