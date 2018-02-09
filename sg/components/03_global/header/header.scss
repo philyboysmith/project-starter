@@ -84,11 +84,14 @@
             display: inline-block;
             padding: space(m);
             color: color(neutral--darkest);
-            &:hover,
-            .active & {
+            &:hover {
                 color: color(primary);
             }
         }
+    }
+
+    li.active a {
+        color: color(primary);
     }
 }
 
