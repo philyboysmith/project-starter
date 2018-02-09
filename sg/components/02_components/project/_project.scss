@@ -3,7 +3,7 @@
     position: relative;
     color: white;
     transition: background-color 0.5s;
-    display: inline-block;
+    display: block;
     overflow: hidden;
     &:hover {
         background-color: color(primary);
@@ -36,6 +36,9 @@
 
 .c-project__icon {
     flex: 0 0 4em;
+    * {
+        fill: white;
+    }
 }
 
 .c-project__title {

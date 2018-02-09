@@ -1,0 +1,6 @@
+<perch:before><ul class="c-work-filter"></perch:before>
+	<li class="c-work-filter__item">
+		<a href="#<perch:category id="catSlug" type="slug" for="catTitle" />-work" <perch:if exists="perch_item_first"> class="active" </perch:if>><perch:category id="catTitle" type="smarttext" label="Title" required="true" /></a>
+	</li>
+	<perch:category id="desc" type="textarea" label="Description" editor="redactor" html="true" size="s" suppress="true"/>
+<perch:after></ul></perch:after>

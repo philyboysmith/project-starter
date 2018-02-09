@@ -1,0 +1,29 @@
+<perch:content id="title" type="text" label="Title" required="true" title="true" suppress="true" />
+<perch:content id="slug" type="slug" for="title" editable="false" suppress="true" />
+<div class="c-client">
+    <div class="l-container  l-container--narrow">
+        <div class="c-text-block">
+            <perch:content id="body" type="textarea" label="Body" editor="redactor" html="true" />
+        </div>
+    </div>
+    <perch:content type="image" id="image" label="Logo" width="800" suppress="true"/>
+    <perch:repeater id="projects" label="Projects">
+        <perch:before>
+            <div class="l-grid">
+        </perch:before>
+        <perch:related id="projects" collection="Projects" max="1">
+            <div class="l-grid__item">
+                <perch:if exists="vimeo">
+                    <div class="l-video-container">
+                        <iframe src="https://player.vimeo.com/video/<perch:content id="vimeo" type="vimeo" output="vimeoID" />" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+                    </div>
+
+                </perch:if>
+            </div>
+        </perch:related>
+        <perch:after>
+            </div>
+        </perch:after>
+    </perch:repeater>
+</div>

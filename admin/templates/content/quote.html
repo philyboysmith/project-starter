@@ -1,0 +1,24 @@
+<perch:before>
+<div class="bg--primary">
+    <div class="l-container">
+</perch:before>
+        <div class="c-quote">
+            <div class="c-quote__mark">
+                &ldquo;
+            </div>
+            <div class="c-quote__text">
+                <perch:content id="text" type="textarea" label="Text" html="true" editor="redactor" />
+                <p class="c-quote__citation">
+                    — <perch:content id="cite" type="text" label="Citation" required="true" title="true" />
+                </p>
+            </div>
+            <perch:related id="clients" collection="Clients" max="1" label="Client">
+            <div class="c-quote__logo">
+                <img src="<perch:content type="image" id="image" />" alt="<perch:content type="text" id="title" />" />
+            </div>
+            </perch:related>
+        </div>
+<perch:after>
+    </div>
+</div>
+</perch:after>

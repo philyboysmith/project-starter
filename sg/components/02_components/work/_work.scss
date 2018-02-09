@@ -26,18 +26,34 @@
             overflow: hidden;
         }
     }
-    a:hover {
+    a:hover,
+    a.active {
         color: color(neutral);      
         &:before {
             max-width: 2em;
         }
     }
     a.active {
-        color: color(primary);
+        color: color(primary)!important;
     }
 }
 
 .c-work__item {
     padding-top: space(l);
     display: none;
+}
+
+.c-client p:first-child{
+    font-size:1.2em;
+    font-weight: 500;
+}
+
+.c-client__logo {
+    filter: grayscale(1);
+    opacity: 0.5;
+    transition: all 0.4s;
+}
+.c-client__logo:hover {
+    filter: grayscale(0);
+    opacity: 1;
 }

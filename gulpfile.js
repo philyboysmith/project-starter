@@ -159,6 +159,14 @@ gulp.task("svg:process", function() {
     .pipe(gulp.dest("sg/components/"))
     .pipe(
       rename(function(path) {
+        path.basename = "icons";
+        path.extname = ".php";
+        return path;
+      })
+    )
+    .pipe(gulp.dest("admin/templates/layouts/"))
+    .pipe(
+      rename(function(path) {
         path.basename = "inline";
         path.extname = ".svg";
         return path;

@@ -3,6 +3,9 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 space(m);
+    &--narrow {
+        max-width: 800px;
+    }
 }
 
 .l-container--flex {
@@ -23,6 +26,11 @@
     display: flex;
     margin: 0 0 space(m);
     @extend %list--unstyled;
+    flex-wrap: wrap;
+}
+
+.l-grid--v-center {
+    align-items: center;
 }
 
 .l-grid__item {
@@ -30,10 +38,35 @@
     padding: space(m);
     @include bp(m){
         flex-basis: 50%;
+        &:nth-child(odd){
+            padding-left: 0;
+        }
+        &:nth-child(even){
+            padding-right: 0;
+        }
+        @include bp(lg){
+            &.l-grid__item--narrow{
+                flex-basis: 33.333%;
+                padding: space(m)!important;
+            }
+        }
     }
     @include bp(lg){
         .l-grid--filterable & {
             flex-basis: 33.333%;
         }
     }
+}
+
+.l-video-container {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+}
+.l-video-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }

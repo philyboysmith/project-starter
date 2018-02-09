@@ -1,9 +1,12 @@
 .c-footer {
     padding: space(l) 0;
-    p, a {
+    p{
         color: color(neutral--lightest);
         font-size: 0.8em;
         line-height: 1.5;
+    }
+    a {
+        color: inherit;
     }
     a:hover {
         color: color(neutral--lighter)
