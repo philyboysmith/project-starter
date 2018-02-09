@@ -2,7 +2,7 @@
     <div class="c-header__nav">
         <ul>
 </perch:before>
-		<li<perch:if exists="current_page"> class="selected"</perch:if><perch:if exists="ancestor_page"> class="ancestor"</perch:if>>
+		<li<perch:if exists="current_page"> class="active"</perch:if><perch:if exists="ancestor_page"> class="ancestor"</perch:if>>
             <a href="<perch:pages id="pagePath" />"><perch:pages id="pageNavText" /></a>   
             <perch:pages id="subitems" encode="false" />
         </li>
