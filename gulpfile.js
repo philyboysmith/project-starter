@@ -1,6 +1,5 @@
 "use strict";
 const path = require("path");
-
 const filenames = require("gulp-filenames");
 const gulp = require("gulp");
 const gulpif = require("gulp-if");
@@ -24,7 +23,7 @@ const fractal = require("./fractal.js"); // import the Fractal instance configur
 
 const logger = fractal.cli.console; // make use of Fractal's console object for logging
 
-const watchOpt = { awaitWriteFinish: true };
+const watchOpt = { awaitWriteFinish: true, interval: 500 };
 
 const STYLES_WATCHLIST = ["src/scss/**/*.scss", "sg/components/**/*.scss"];
 

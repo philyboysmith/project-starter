@@ -10,7 +10,7 @@
             break;
     }
 
-    define('PERCH_LICENSE_KEY', 'R3-LOCAL-MCP180-GHH208-VDY026');
+    define('PERCH_LICENSE_KEY', 'R31802-FEP472-KNE474-AMU928-DEV009');
     define('PERCH_EMAIL_FROM', 'phil@amillionmonkeys.co.uk');
     define('PERCH_EMAIL_FROM_NAME', 'Phil Smith');
 

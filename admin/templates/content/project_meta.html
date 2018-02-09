@@ -1,0 +1,23 @@
+<div class="c-project__meta">
+        <div class="c-project__icon">
+            <perch:categories id="service" set="service">
+                <perch:if id="catSlug" value="film">
+                    <svg class="c-icon" viewBox="0 0 75 66">
+                        <use xlink:href="#film"></use>
+                    </svg>
+                </perch:if>
+                
+
+                <perch:if id="catSlug" value="animation-motion-graphics">
+                    <svg class="c-icon" viewBox="0 0 83 80">
+                        <use xlink:href="#animation"></use>
+                    </svg>
+                </perch:if>
+            </perch:categories>
+        </div>
+        <div class="c-project__title">
+            <h3>
+                <perch:content id="title" type="text" label="Title" required="true" title="true" /><br />
+                <span class="font-thin"><perch:content id="summary" type="text" label="Summary" title="true" /></span></h3>
+        </div>
+    </div>

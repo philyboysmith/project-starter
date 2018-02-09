@@ -1,5 +1,5 @@
 .c-hero {
-    background-color: $color-overlay;
+    background-color: color(primary);
     position: relative;
     color: white;
     width: 100%;
@@ -8,6 +8,12 @@
         overflow: hidden;
     }
 
+}
+
+.c-hero--half-height {
+    @include bp(lg){
+        min-height: 50vh;
+    }
 }
 
 .c-hero--full-height {

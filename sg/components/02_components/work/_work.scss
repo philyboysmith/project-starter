@@ -57,3 +57,16 @@
     filter: grayscale(0);
     opacity: 1;
 }
+.c-client  .c-project {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.c-client  .c-project:hover {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.c-client  .c-project:hover .c-project__image{
+    transform: scale(1)!important;
+}

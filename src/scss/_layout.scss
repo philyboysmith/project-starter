@@ -63,7 +63,8 @@
 	padding-bottom: 56.25%; /* 16:9 */
 	height: 0;
 }
-.l-video-container iframe {
+.l-video-container iframe,
+.l-video-container > div {
 	position: absolute;
 	top: 0;
 	left: 0;

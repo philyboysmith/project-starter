@@ -1,4 +1,4 @@
-<div class="c-hero  c-hero--full-height">
+<div class="c-hero  <perch:if id="height" value="full">c-hero--full-height</perch:if><perch:if id="height" value="half">c-hero--half-height</perch:if>">
     <div class="c-hero__bg">
         <video autoplay loop id="c-header__video" muted plays-inline poster="">
             <source src="<perch:content id="videoUrl" type="text" label="Video URL" required="true" title="true" help="Please provide the link to the MP4 file" />" type="video/mp4">
@@ -7,10 +7,10 @@
     <div class="c-hero__overlay">
         <div class="l-container">
             <div class="c-hero__text">
-                <h2 class="font-thin">
-                    <perch:content id="text" type="textarea" label="Hero text" html="true" editor="redactor"  />
-                </h2>
+                <perch:content id="text" type="textarea" label="Hero text" html="true" editor="redactor"  />
             </div>
         </div>
     </div>
 </div>
+
+<perch:content id="height" type="select" label="Hero height" options="two-thirds, full, half" allowempty="false" required="true" suppress="true"/>

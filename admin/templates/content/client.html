@@ -1,8 +1,9 @@
-<perch:content id="title" type="text" label="Title" required="true" title="true" suppress="true" />
 <perch:content id="slug" type="slug" for="title" editable="false" suppress="true" />
 <div class="c-client">
     <div class="l-container  l-container--narrow">
+
         <div class="c-text-block">
+            <H3><STRONG><perch:content id="title" type="text" label="Title" required="true" title="true" /></STRONG></H3>
             <perch:content id="body" type="textarea" label="Body" editor="redactor" html="true" />
         </div>
     </div>
@@ -16,6 +17,12 @@
                 <perch:if exists="vimeo">
                     <div class="l-video-container">
                         <iframe src="https://player.vimeo.com/video/<perch:content id="vimeo" type="vimeo" output="vimeoID" />" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <div class="c-project">
+                            <div class="c-project__image">
+                                <img src="<perch:content id="vimeo" type="vimeo" output="thumb" />" />
+                            </div>
+                            <perch:template path="content/project_meta.html" />
+                        </div>
                     </div>
 
                 </perch:if>

@@ -6,37 +6,17 @@
             <a href="work/<perch:content id="slug" />" class="c-project">
         </perch:related>
     <div class="c-project__image">
-        <perch:if exists="vimeo">
-            <img src=" <perch:content type="vimeo" id="vimeo" output="thumb" label="Vimeo link" />" alt="<perch:content id="title" type="text" label="Title" required="true" title="true" />" />
+            <perch:if exists="image">
+                <img src="<perch:content type="image" id="image" label="Image" width="1200" height="675"/>" alt="<perch:content id="title" type="text" label="Title" required="true" title="true" />" />
             <perch:else />
-        <img src="<perch:content type="image" id="image" label="Image" width="1200" height="675"/>" alt="<perch:content id="title" type="text" label="Title" required="true" title="true" />" />
-
+                <perch:if exists="vimeo">
+                    <img src=" <perch:content type="vimeo" id="vimeo" output="thumb" label="Vimeo link" />" alt="<perch:content id="title" type="text" label="Title" required="true" title="true" />" />
+                </perch:if>
         </perch:if>
     </div>
     
-    <div class="c-project__meta">
-        <div class="c-project__icon">
-            <perch:categories id="service" set="service">
-                <perch:if id="catSlug" value="film">
-                    <svg class="c-icon" viewBox="0 0 75 66">
-                        <use xlink:href="#film"></use>
-                    </svg>
-                </perch:if>
-                
+    <perch:template path="content/project_meta.html" />
 
-                <perch:if id="catSlug" value="animation-motion-graphics">
-                    <svg class="c-icon" viewBox="0 0 83 80">
-                        <use xlink:href="#animation"></use>
-                    </svg>
-                </perch:if>
-            </perch:categories>
-        </div>
-        <div class="c-project__title">
-            <h3>
-                <perch:content id="title" type="text" label="Title" required="true" title="true" /><br />
-                <span class="font-thin"><perch:content id="summary" type="text" label="Summary" title="true" /></span></h3>
-        </div>
-    </div>
 <perch:related id="clients" collection="Clients" max="1" label="Client">
 </a>
 </perch:related>
