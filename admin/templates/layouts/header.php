@@ -4,7 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/dist/css/styles.css">
-    <title><?php perch_pages_title(); ?></title>
+        <?php
+            if (perch_layout_has('blog-post')) {
+                perch_blog_post_meta(perch_get('s'));
+            }else{
+                echo '<title>' . perch_pages_title(true) . ' | Purple Door Media</title>';
+            }
+        ?>
 	<?php perch_page_attributes(); ?>
 </head>
 <body class="<?php perch_layout_var('body-class'); ?>">

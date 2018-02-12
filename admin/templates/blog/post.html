@@ -1,0 +1,19 @@
+<article class="h-entry c-blog">
+    <p class="c-blog__date">
+            <time class="dt-published" datetime="<perch:blog id="postDateTime" type="date" label="Date" time="true" format="Y-m-d H:i:s" divider-before="Publishing" />">
+                <perch:blog id="postDateTime" type="date" time="true" format="%d %B %Y" /> 
+            </time>
+        </p>
+    <h1>
+        <a href="<perch:blog id="postURL" type="hidden" />" rel="bookmark" class="p-name">
+            <perch:blog id="postTitle" type="text" label="Title" required="true" size="xl autowidth" order="1" />
+        </a>
+    </h1>
+	
+    <div class="c-text-block  c-text-block--topless e-content">
+    	<perch:blog id="postDescHTML" type="textarea" label="Post" order="2" editor="redactor" html="true" size="xxl autowidth" required="true" />
+    </div>
+</article>
+
+<perch:blog id="excerpt" type="textarea" label="Excerpt" markdown="true" order="3" suppress="true" size="s" />
+<perch:blog id="image" type="image" width="50" height="50" crop="true" suppress="true" />
