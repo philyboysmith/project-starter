@@ -13,7 +13,7 @@
             <div class="l-grid">
         </perch:before>
         <perch:related id="projects" collection="Projects" max="1">
-            <div class="l-grid__item">
+            <div class="l-grid__item" id="<perch:content id="title" urlify="true" />">
                 <perch:if exists="vimeo">
                     <div class="l-video-container">
                         <iframe src="https://player.vimeo.com/video/<perch:content id="vimeo" type="vimeo" output="vimeoID" />" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>

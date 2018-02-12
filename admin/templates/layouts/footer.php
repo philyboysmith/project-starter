@@ -18,6 +18,6 @@
         </div>
 
     </div><!--/#page -->
-    <script src="/dist/js/scripts.min.js"></script>
+    <script src="/dist/js/scripts.min.js?v2"></script>
 </body>
 </html>
