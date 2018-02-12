@@ -410,5 +410,12 @@
     "Are you sure you wish to republish all pages?": "Are you sure you wish to republish all pages?",
     "Republishing is under way.": "Republishing is under way.",
     "Republishing: %s on page %s": "Republishing: %s on page %s",
-    "Republishing completed successfully": "Republishing completed successfully"
+    "Republishing completed successfully": "Republishing completed successfully",
+    "Delete item": "Delete item",
+    "Are you sure you wish to delete this item in the \u2018%s\u2019 collection?": "Are you sure you wish to delete this item in the \u2018%s\u2019 collection?",
+    "Blog": "Blog",
+    "Show dedicated back link in sidebar": "Show dedicated back link in sidebar",
+    "Enable keyboard shortcuts": "Enable keyboard shortcuts",
+    "Skip region list for just one region": "Skip region list for just one region",
+    "Enforce bucket restrictions on content": "Enforce bucket restrictions on content"
 }
