@@ -1,0 +1,14 @@
+<div class="c-hero  <perch:if id="height" value="full">c-hero--full-height</perch:if><perch:if id="height" value="half">c-hero--half-height</perch:if>">
+    <div class="c-hero__bg">
+        <img src="<perch:content type="image" id="image" label="Image" width="1920" />">
+    </div>
+    <div class="c-hero__overlay">
+        <div class="l-container">
+            <div class="c-hero__text">
+                <perch:content id="text" type="textarea" label="Hero text" html="true" editor="redactor"  />
+            </div>
+        </div>
+    </div>
+</div>
+
+<perch:content id="height" type="select" label="Hero height" options="two-thirds, full, half" allowempty="false" required="true" suppress="true"/>
