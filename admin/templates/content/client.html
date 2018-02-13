@@ -24,7 +24,16 @@
                             <perch:template path="content/project_meta.html" />
                         </div>
                     </div>
+                <perch:else />
 
+                <div class="l-video-container">
+                    <div class="c-project">
+                        <div class="c-project__image">
+                            <img src="<perch:content id="image" type="image"  width="1200" height="675" />" />
+                        </div>
+                        <perch:template path="content/project_meta.html" />
+                    </div>
+                </div>
                 </perch:if>
             </div>
         </perch:related>

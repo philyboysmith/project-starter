@@ -62,7 +62,7 @@
     transition: opacity 0.3s;
 }
 
-.c-client  .c-project:hover {
+.c-client  .c-project:not(:first-child):hover {
     opacity: 0;
     visibility: hidden;
 }
