@@ -37,10 +37,10 @@
         align-items: center;
         img {
             flex: 0 0 auto;
-            max-width: 9em;
+            max-height: 4em;
             height: auto;
             display: block;
-            filter: saturate(0.2);
+            filter: greyscale(1);
         }
     }
 }
