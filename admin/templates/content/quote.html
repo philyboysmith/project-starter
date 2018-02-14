@@ -13,11 +13,18 @@
                     — <perch:content id="cite" type="text" label="Citation" required="true" title="true" />
                 </p>
             </div>
-            <perch:related id="clients" collection="Clients" max="1" label="Client">
-            <div class="c-quote__logo">
-                <img src="<perch:content type="image" id="image" />" alt="<perch:content type="text" id="title" />" />
-            </div>
-            </perch:related>
+            <perch:if exists="image">
+                <div class="c-quote__logo">
+                    <img src="<perch:content type="image" id="image" label="Logo" help="If not provided we'll just use the client logo"/>" alt="<perch:content type="text" id="cite" />" />
+                </div>
+                <perch:else />
+                    <perch:related id="clients" collection="Clients" max="1" label="Client">
+                        <div class="c-quote__logo">
+                            <img src="<perch:content type="image" id="image" />" alt="<perch:content type="text" id="title" />" />
+                        </div>
+                        </perch:related>
+                </perch:else>
+            </perch:if>
         </div>
 <perch:after>
     </div>
