@@ -1,6 +1,6 @@
         <?php perch_collection('quotes', [
-            'count'=> 1,
-            'sort-order'=>'rand'
+            'sort-order' => 'RAND',
+            'count' => 1
         ]); ?>
         <div class="bg--neutral--darkest">
             <div class="l-container">
