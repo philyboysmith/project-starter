@@ -432,5 +432,8 @@
     "Show dedicated back link in sidebar": "Show dedicated back link in sidebar",
     "Enable keyboard shortcuts": "Enable keyboard shortcuts",
     "Skip region list for just one region": "Skip region list for just one region",
-    "Enforce bucket restrictions on content": "Enforce bucket restrictions on content"
+    "Enforce bucket restrictions on content": "Enforce bucket restrictions on content",
+    "Delete Asset": "Delete Asset",
+    "Are you sure you wish to delete this asset? %sIt may be in use on your site. Deleting will result in the asset no longer being available.%s": "Are you sure you wish to delete this asset? %sIt may be in use on your site. Deleting will result in the asset no longer being available.%s",
+    "Importing into Collection": "Importing into Collection"
 }
