@@ -1,4 +1,5 @@
         <?php perch_collection('quotes', [
+            'sort' => 'id',
             'sort-order' => 'RAND',
             'count' => 1
         ]); ?>
