@@ -7,7 +7,9 @@
         <?php
             if (perch_layout_has('blog-post')) {
                 perch_blog_post_meta(perch_get('s'));
-            }else{
+            }elseif (perch_layout_has('title')){
+                echo '<title>' . perch_layout_var('title', true) . ' | Purple Door Media</title>';
+            }else {
                 echo '<title>' . perch_pages_title(true) . ' | Purple Door Media</title>';
             }
         ?>

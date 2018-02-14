@@ -1,4 +1,12 @@
-<?php perch_layout('header'); ?>
+<?php $item = perch_collection('clients', [
+        'filter'=>'slug',
+        'value'=> perch_get('s'),
+        'skip-template'=>true
+], false); 
+
+perch_layout('header', [
+    'title'=>$item[0]['title']
+]); ?>
 
 <main class="c-main">
 
