@@ -49,7 +49,9 @@
 }
 
 .c-client__logo {
-    filter: grayscale(1);
+    @include bp(lg){
+        filter: grayscale(1);
+    }
     opacity: 0.5;
     transition: all 0.4s;
     max-width: 10em;
