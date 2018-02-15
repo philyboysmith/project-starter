@@ -51,8 +51,8 @@
 .c-client__logo {
     @include bp(lg){
         filter: grayscale(1);
+        opacity: 0.5;
     }
-    opacity: 0.5;
     transition: all 0.4s;
     max-width: 10em;
     display: block;
