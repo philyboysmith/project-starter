@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/dist/css/styles.css?v=3">
+    <link rel="stylesheet" href="/dist/css/styles.css?v=4">
         <?php
             if (perch_layout_has('blog-post')) {
                 perch_blog_post_meta(perch_get('s'));
