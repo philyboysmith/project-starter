@@ -1,10 +1,12 @@
 .c-header__wrapper {
     background: rgba(#EEEEEE, 0.8);
     @include bp(lg){
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: $z-index--header;
+        .fixed-header & {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: $z-index--header;
+        }
     }
 }
 
@@ -86,6 +88,10 @@
                 color: color(primary);
             }
         }
+    }
+
+    li.active a {
+        color: color(primary);
     }
 }
 

@@ -1,0 +1,36 @@
+.c-blog {
+    padding-top: space(l);
+}
+
+.c-blog__post {
+    margin-bottom: space(m);
+    position: relative;
+    padding-bottom: space(l);
+    margin-bottom: space(l);
+    &::after {
+        position: absolute;
+        left: 50%;
+        content: '';
+        background-color: color(neutral--lightest);
+        bottom: 0;
+        height: 1px;
+        width: 4em;
+    }
+}
+
+
+.c-blog__date {
+    @extend %text-small;
+    text-transform: uppercase;
+    color: color(neutral--lighter);
+    letter-spacing: 2px;
+    margin-bottom: 0;
+}
+
+.c-blog__title {
+
+}
+
+.c-blog {
+    @extend %list--unstyled;
+}

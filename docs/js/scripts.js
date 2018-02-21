@@ -11007,7 +11007,53 @@ if ( !noGlobal ) {
 return jQuery;
 }));
 
+$(document).ready(function() {
+  if (window.location.hash !== "") {
+    var location = window.location.hash;
+    var iframe = $(location).find("iframe");
+    $(location).addClass("open");
+    if (iframe.length > 0) {
+      var player = new Vimeo.Player(iframe);
+      player.play();
+    }
+  }
 
+  var event = "ontouchstart" in window ? "click" : "mouseenter mouseleave";
+
+  $(".c-client .l-grid__item").on(event, function() {
+    var iframe = $(this).find("iframe");
+    $(this).siblings().removeClass('open');
+    $(this).toggleClass("open");
+    if($(this).hasClass("open")){
+        if (iframe.length > 0) {
+            var player = new Vimeo.Player(iframe);
+            player.play();
+        }
+    } else {
+        if (iframe.length > 0) {
+            var player = new Vimeo.Player(iframe);
+            player.pause();
+        }
+    }
+  });
+});
+
+if ( window.location.hash ) scroll(0,0);
+// void some browsers issue
+setTimeout( function() { scroll(0,0); }, 1);
+
+$(function() {
+
+    // *only* if we have anchor on the url
+    if(window.location.hash) {
+
+        // smooth scroll to the anchor id
+        $('html, body').animate({
+            scrollTop: $(window.location.hash).offset().top + 'px'
+        }, 1000, 'swing');
+    }
+
+});
 $(document).ready(function() {
     $( "#menuToggle" ).on( "click", function() {
         $("body").toggleClass("js-nav-active");
@@ -11024,8 +11070,7 @@ $(document).ready(function() {
         target = $(hash);
     target
       .siblings()
-      .fadeOut(function(){
-        target.fadeIn();
-      });
+      .fadeOut(250);
+    target.delay(250).fadeIn();
   });
 });

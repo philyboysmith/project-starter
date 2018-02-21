@@ -118,6 +118,7 @@ a {
   word-wrap: break-word;
   color: $color-link;
   transition: color 0.2s;
+  outline: none!important;
 }
 
 a:hover {

@@ -238,14 +238,14 @@
                             
                             <code class="Code Code--lang-SCSS FileBrowser-code">
                                 <pre><span class="hljs-selector-class">.c-project</span> {
-    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-overlay</span>;
+        <span class="hljs-attribute">background-color</span>: color(primary);
     <span class="hljs-attribute">position</span>: relative;
     <span class="hljs-attribute">color</span>: white;
     <span class="hljs-attribute">transition</span>: background-color <span class="hljs-number">0.5s</span>;
-    <span class="hljs-attribute">display</span>: inline-block;
+    <span class="hljs-attribute">display</span>: block;
     <span class="hljs-attribute">overflow</span>: hidden;
     &amp;:hover {
-        <span class="hljs-attribute">background-color</span>: color(primary);
+        <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-overlay</span>;
         <span class="hljs-attribute">color</span>: white;
     }
 }
@@ -253,9 +253,12 @@
 <span class="hljs-selector-class">.c-project__image</span> {
     <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.7</span>;
     <span class="hljs-attribute">transition</span>: all <span class="hljs-number">0.5s</span>;
-    <span class="hljs-selector-class">.c-project</span>:hover &amp; {
-        <span class="hljs-comment">// opacity: 0.8;</span>
         <span class="hljs-attribute">filter</span>: grayscale(<span class="hljs-number">0.6</span>);
+
+    <span class="hljs-selector-class">.c-project</span>:hover &amp; {
+        <span class="hljs-attribute">filter</span>: grayscale(<span class="hljs-number">0</span>);
+
+        <span class="hljs-comment">// opacity: 0.8;</span>
         <span class="hljs-attribute">transform</span>: scale(<span class="hljs-number">1.05</span>);
     }
     &gt; * {
@@ -275,11 +278,16 @@
 
 <span class="hljs-selector-class">.c-project__icon</span> {
     <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">4em</span>;
+    * {
+        fill: white;
+    }
 }
 
 <span class="hljs-selector-class">.c-project__title</span> {
     <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span>;
-    <span class="hljs-attribute">padding-left</span>: space(s);
+    &gt;*:last-child{
+        <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
+    }
 }
 </pre>
                             </code>
@@ -297,7 +305,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">734 Bytes</span>
+                    <span class="Meta-value">821 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -519,6 +527,30 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="blog.html" data-pjax>
+                <span>Blog</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="buttons.html" data-pjax>
                 <span>Buttons</span>
                 
@@ -633,6 +665,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="menu_toggle.html" data-pjax>
                 <span>Menu Toggle</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="pagination.html" data-pjax>
+                <span>Pagination</span>
                 
 
 <div class="Status Status--unlabelled">

@@ -8,8 +8,7 @@ $(document).ready(function() {
         target = $(hash);
     target
       .siblings()
-      .fadeOut(function(){
-        target.fadeIn();
-      });
+      .fadeOut(250);
+    target.delay(250).fadeIn();
   });
 });

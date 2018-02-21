@@ -3,13 +3,13 @@
     padding-top: space(l);
 }
 
-.c-work-filter__item {
+.c-work-filter__item,
+.c-clients__related-list li {
     @extend %h4, %font-thin;
     position: relative;
     margin-bottom: space(s);
     a {
         line-height: 1.2;
-        padding-left: 0.5em;
         padding-right: space(m);
         display: inline-block;
         color: color(neutral--lighter);
@@ -18,7 +18,7 @@
             content: "–";
             font-weight: 300;
             position: absolute;
-            left: 0;
+            left: -0.5em;
             top:0;
             transform: translateX(-100%);
             max-width: 0;
@@ -67,11 +67,11 @@
     transition: opacity 0.3s;
 }
 
-.c-client  .c-project:not(:first-child):hover {
+.c-client  .open .c-project:not(:first-child) {
     opacity: 0;
     visibility: hidden;
 }
 
-.c-client  .c-project:hover .c-project__image{
+.c-client  .open .c-project .c-project__image{
     transform: scale(1)!important;
 }

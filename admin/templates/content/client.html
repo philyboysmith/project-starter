@@ -40,4 +40,22 @@
             </div>
         </perch:after>
     </perch:repeater>
+
+    <perch:related id="clients" collection="Clients" label="Related clients">
+        <perch:before>
+                <div class="l-container  l-container--narrow">
+
+                        <div class="c-text-block">
+                            <h5>Related work</h5>
+            <ul class="c-clients__related-list list--unstyled">
+        </perch:before>
+        <li><a href="/work/<perch:content id="slug" type="slug" />">
+            <perch:content id="title" />
+          </a></li>
+        <perch:after>
+            </ul>
+        </div>
+        </div>
+        </perch:after>
+    </perch:related>
 </div>

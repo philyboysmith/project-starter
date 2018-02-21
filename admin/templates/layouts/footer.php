@@ -31,6 +31,8 @@
         </div>
 
     </div><!--/#page -->
-    <script src="/dist/js/scripts.min.js?v2"></script>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+
+    <script src="/dist/js/scripts.min.js?<?php echo time();?>"></script>
 </body>
 </html>
