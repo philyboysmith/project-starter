@@ -13,6 +13,11 @@
                 echo '<title>' . perch_pages_title(true) . ' | Purple Door Media</title>';
             }
         ?>
+        <style>
+            .l-video-container {
+                cursor: pointer;
+            }
+        </style>
 	<?php perch_page_attributes(); ?>
 </head>
 <body class="<?php perch_layout_var('body-class'); ?>">
