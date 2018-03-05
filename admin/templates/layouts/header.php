@@ -17,6 +17,9 @@
             .l-video-container {
                 cursor: pointer;
             }
+            .l-grid {
+                justify-content: center
+            }
         </style>
 	<?php perch_page_attributes(); ?>
 </head>
