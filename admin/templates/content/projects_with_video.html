@@ -1,0 +1,33 @@
+<perch:before>
+    <ul class="l-grid">
+</perch:before>
+    <li class="l-grid__item">
+            <perch:if exists="vimeo">
+                    <div class="l-video-container">
+                        <iframe src="https://player.vimeo.com/video/<perch:content id="vimeo" type="vimeo" output="vimeoID" />" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <div class="c-project">
+                            <div class="c-project__image">
+                                <img src="<perch:content id="vimeo" type="vimeo" output="thumb" />" />
+                            </div>
+                            <perch:template path="content/project_meta.html" />
+                        </div>
+                    </div>
+                <perch:else />
+                <div class="l-video-container">
+                    <div class="c-project">
+                        <div class="c-project__image">
+                            <img src="<perch:content id="image" type="image"  width="1200" height="675" />" />
+                        </div>
+                        <perch:template path="content/project_meta.html" />
+                    </div>
+                </div>
+                </perch:if>
+</li>
+<perch:after>
+</ul>
+</perch:after>
+<perch:content id="vimeo" type="vimeo" label="Vimeo link"  suppress="true" />
+<perch:content type="image" id="image" label="Image" width="600" height="375" suppress="true" />
+<perch:categories id="service" label="Type of work" set="service" required="true" />
+<perch:content id="featured" type="checkbox" label="Featured on homepage?" value="1" suppress="true"/>
+

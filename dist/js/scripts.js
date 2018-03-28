@@ -11038,6 +11038,25 @@ $(document).ready(function() {
             }
         }
     });
+
+    $("#homeGrid .l-grid__item").on(event, function() {
+        var iframe = $(this).find("iframe");
+        $(this)
+            .siblings()
+            .removeClass("open");
+        $(this).toggleClass("open");
+        if ($(this).hasClass("open")) {
+            if (iframe.length > 0) {
+                var player = new Vimeo.Player(iframe);
+                player.play();
+            }
+        } else {
+            if (iframe.length > 0) {
+                var player = new Vimeo.Player(iframe);
+                player.stop();
+            }
+        }
+    });
 });
 
 if ( window.location.hash ) scroll(0,0);
