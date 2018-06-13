@@ -36,7 +36,7 @@ class PerchFieldType_vimeo extends PerchAPI_FieldType
             $ratio = $json['height'] / $json['width'];
             $w     = 320;
             $h     = $w*$ratio;
-            $s     .= '<div class="preview"><iframe src="https://player.vimeo.com/video/'.$json['vimeoID'].'?portrait=0&amp;badge=0&amp;color=ffffff" width="'.$w.'" height="'.$h.'" frameborder="0"></iframe></div>';
+            $s     .= '<div class="preview"><iframe src="https://player.vimeo.com/video/'.$json['vimeoID'].'?portrait=0&amp;badge=0&amp;color=ffffff" width="'.$w.'" height="'.$h.'" frameborder="0"></iframe><p>Fetch the MP4 URL from: <a target="_blank" href="https://vimeo.com/'.$json['vimeoID'].'/settings/file">here</a></p></div>';
         }
         
         return $s;

@@ -3,6 +3,35 @@
 </perch:before>
     <li class="l-grid__item">
             <perch:if exists="vimeo">
+                <perch:if exists="mp4">
+                    <div class='c-video__wrapper'>
+                            <video id="Video<perch:content id="_id" type="hidden" />" class="c-video" poster="<perch:content id="vimeo" type="vimeo" output="thumb" />">
+                                <source src='<perch:content id="mp4" type="text" label="MP4 URL" required="true" />' type='video/mp4'>
+                            </video>
+                            <div class='c-video__controls'>
+                                <button    
+                                id="Btn<perch:content id="_id" type="hidden" />" 
+                                    class='c-video__play-pause-button'
+                                    title='play'
+                                    onclick='toggleplaypause(<perch:content id="_id" type="hidden" />);'>
+                                    <i class="la la-play"></i>
+                                </button>
+                                    <button    
+                                    id="MuteBtn<perch:content id="_id" type="hidden" />" 
+                                        class='c-video__mute-button'
+                                        title='mute'
+                                        onclick='toggleaudio(<perch:content id="_id" type="hidden" />);'>
+                                        <i class="la la-volume-off"></i>
+                                    </button>
+                                    <button id="FullScreenBtn<perch:content id="_id" type="hidden" />" 
+                                            class='c-video__fullscreen-button'
+                                            title='fullscreen'
+                                            onclick='goFullScreen(<perch:content id="_id" type="hidden" />);'><i class="la la-expand"></i></button>
+                            </div>
+                            <perch:template path="content/project_meta.html" />
+
+                        </div>
+                    <perch:else />
                     <div class="l-video-container">
                         <iframe src="https://player.vimeo.com/video/<perch:content id="vimeo" type="vimeo" output="vimeoID" />" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                         <div class="c-project">
@@ -12,6 +41,7 @@
                             <perch:template path="content/project_meta.html" />
                         </div>
                     </div>
+                    </perch:if>
                 <perch:else />
                 <div class="l-video-container">
                     <div class="c-project">

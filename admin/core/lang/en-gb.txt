@@ -195,5 +195,6 @@
     "Hide from main navigation": "Hide from main navigation",
     "Subpages": "Subpages",
     "May be created by": "May be created by",
-    "May use these master pages": "May use these master pages"
+    "May use these master pages": "May use these master pages",
+    "Item": "Item"
 }

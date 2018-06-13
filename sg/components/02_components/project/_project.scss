@@ -1,5 +1,6 @@
-.c-project {
-        background-color: color(primary);
+.c-project,
+.c-video__wrapper {
+    background-color: color(primary);
     position: relative;
     color: white;
     transition: background-color 0.5s;
@@ -14,7 +15,7 @@
 .c-project__image {
     opacity: 0.7;
     transition: all 0.5s;
-        filter: grayscale(0.6);
+    filter: grayscale(0.6);
 
     .c-project:hover & {
         filter: grayscale(0);
@@ -46,7 +47,59 @@
 
 .c-project__title {
     flex: 1;
+    color: white;
+    opacity: 1;
+    transition: 0.2s;
+
     >*:last-child{
         margin-bottom: 0;
+    }
+    .c-video__wrapper:hover & {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+.c-video__wrapper {
+    position: relative;
+    overflow: hidden;
+    
+    video {
+        width: 100%;
+        opacity: 0.7;
+        transition: all 0.5s;
+    }
+    &:hover video {
+        opacity: 1;
+    }
+}
+
+.c-video__controls {
+    position: absolute;
+    z-index: 10;
+    bottom: 1em;
+    left: 0;
+    width: 100%;
+    display: flex;
+    transform: translateY(4em);
+    transition: 0.2s;
+    .c-video__wrapper:hover & {
+        transform: translateY(0);
+    }
+    button {
+        appearance: none;
+        background: transparent;
+        border: 0;
+        font-size: 2em;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+        outline: 0;
+        appearance: none;
+        cursor: pointer;
+        color: white;
+    }
+   
+    .c-video__fullscreen-button {
+        margin-left: auto;
     }
 }
